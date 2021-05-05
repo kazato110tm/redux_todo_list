@@ -3,7 +3,7 @@ const initialState = {
   tasks: []
 };
 
-export default function tasksReducer(state = initialState, action) {
+ function tasksReducer(state = initialState, action) {
   switch (action.type) {
     case 'INPUT_TASK':
       return {
@@ -24,3 +24,5 @@ export default function tasksReducer(state = initialState, action) {
       return state;
   }
 }
+
+export default tasksReducer;

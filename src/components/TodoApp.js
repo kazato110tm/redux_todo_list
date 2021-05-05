@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TodoApp({ task, tasks, inputTask, addTask, resetTask }) {
+function TodoApp({ task, tasks, inputTask, addTask, resetTask }) {
   return (
     <div>
       <input type="text" onChange={(e) => inputTask(e.target.value)} />
@@ -18,3 +18,5 @@ export default function TodoApp({ task, tasks, inputTask, addTask, resetTask }) 
     </div>
   );
 }
+
+export default TodoApp;

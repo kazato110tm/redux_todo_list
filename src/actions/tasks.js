@@ -15,3 +15,10 @@ export const addTask = (task) => ({
 export const resetTask = () => ({
   type: 'RESET_TASK'
 });
+
+export function addTodoAndClear(task) {
+  return (dispatch) => {
+    dispatch(addTask(task));
+    dispatch(inputTask(""));
+  }
+}

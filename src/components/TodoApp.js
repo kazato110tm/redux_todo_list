@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TodoApp({ task, tasks, inputTask, addTask, resetTask }) {
+function TodoApp({ task, tasks, inputTask, addTask, resetTask, redirectToError }) {
   return (
     <div>
       <input type="text" onChange={(e) => inputTask(e.target.value)} />
@@ -15,6 +15,7 @@ function TodoApp({ task, tasks, inputTask, addTask, resetTask }) {
           })
         }
       </ul>
+      <button onClick={()=>redirectToError()}>エラーページへ</button>
     </div>
   );
 }
